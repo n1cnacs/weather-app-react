@@ -18,7 +18,7 @@ export default function Weather () {
         <Loader
         type="Puff"
         color="#00BFFF"
-        height={100}
+        height={50}
         width={100}
         timeout={3000} 
 
