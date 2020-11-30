@@ -1,23 +1,23 @@
 import Weather from "./Weather";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="container">
       <header className="App-header">
         <h1>
         Weather App        
         </h1>
-        <div className="Card App-body">
-      <div className="Card-body">
-        < Weather />
-        </div>
-        </div>
-      <h3>Open Source coded by Nicola Warner</h3>
-        
+               < Weather />
+           
+               
+           <h3><a href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner</h3>
+            
+
         </header>
-    </div>
-  );
+    );
 }
 
 export default App;
