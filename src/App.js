@@ -6,17 +6,22 @@ import './App.css';
 
 function App() {
   return (
+      <div className="App">
       <header className="App-header">
-        <h1>
+       
+              
+               <Card> <h1>
         Weather App        
         </h1>
-               < Weather />
-           
+  <Card.Body> 
+    < Weather />
+    </Card.Body>
+</Card>
                
            <h3><a href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner</h3>
             
 
-        </header>
+        </header></div>
     );
 }
 

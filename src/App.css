@@ -1,4 +1,4 @@
-.Container {
+.App {
   text-align: center;
 }
 
@@ -21,7 +21,7 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   justify-content: center;
-  color: white;
+  color: grey;
 }
 
 .App-link {
