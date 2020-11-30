@@ -17,7 +17,7 @@ function App() {
     </Card.Body>
 </Card>
                
-           <h3><a rel="nofollow"href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner.</h3>
+           <h3><a rel="noreferrer"href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner.</h3>
             
 
         </header></div>
