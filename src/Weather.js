@@ -5,18 +5,13 @@ import "./Weather.css";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-
-
-//
-
-
 export default function Weather () {
     function handleResponse (response) {
        // alert(`The weather in New York is ${response.data.main.temp} `);
     }
 
-    let apiKey = "ab0f2c792cf3771f89c1981f17714291";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`
+    const apiKey = "ab0f2c792cf3771f89c1981f17714291";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`
 
     axios.get(apiUrl).then(handleResponse);
     return (
