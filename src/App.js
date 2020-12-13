@@ -6,8 +6,9 @@ import './App.css';
 function App() {
   return (
       <div className="App">
+        <div className="container">
       <header className="App-header">
-       
+       <h1>Hello</h1>
               
                <Card> <h1>
         Weather App        
@@ -20,7 +21,7 @@ function App() {
            <h3><a rel="noreferrer"href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner.</h3>
             
 
-        </header></div>
+        </header></div></div>
     );
 }
 
