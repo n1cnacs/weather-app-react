@@ -17,9 +17,6 @@ function App() {
 
      < City />
      
-  
-
-
 < hr/>
 
 
@@ -27,7 +24,7 @@ function App() {
 <div className="col-4">
 <Card w-100>
 <Card.Body>
-Test
+<i className="fas fa-wind icon-format"></i>
 <span>Wind</span><span className="wind conditions-format" id="wind-speed">10</span>
 </Card.Body>
 </Card>
@@ -36,7 +33,7 @@ Test
 <div className="col-4">
 <Card w-100>
 <Card.Body>
-Test
+<i className="fas fa-temperature-high icon-format"></i>
 Humidity<span className="humid conditions-format" id="humidity">15</span>
 </Card.Body>
 </Card>
@@ -45,7 +42,7 @@ Humidity<span className="humid conditions-format" id="humidity">15</span>
 <div className="col-4">
 <Card w-100>
 <Card.Body>
-Test
+<i class="fas fa-tint icon-format"></i>
 Feels like <span className="precip conditions-format" id="feels-like">10</span>
 </Card.Body>
 </Card>
