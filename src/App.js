@@ -20,23 +20,59 @@ function App() {
                 <Card.Body>
     Placeholder
     <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Sun icon" id="weather-icon"/>
+    <h2 class="conditions-api text-center" id="conditions">Clear</h2>
+
+<h2 class="text-center" id="current-temperature">
+  18
+
+</h2>
+<h3 class="text-center">
+  <a href="#" class="active" id="temperature-link-c">°C </a> |
+  <a href="#" id="temperature-link">°F </a> </h3>
 
    </Card.Body>
 </Card>
 
+< hr/>
 
-<Card> 
-                <Card.Body>
-    Placeholder Images Boxes
-   </Card.Body>
+
+<div className="row">
+<div className="col-4">
+<Card w-100>
+<Card.Body>
+Test
+</Card.Body>
 </Card>
+</div>
+
+<div className="col-4">
+<Card w-100>
+<Card.Body>
+Test
+</Card.Body>
+</Card>
+</div>
+
+<div className="col-4">
+<Card w-100>
+<Card.Body>
+Test
+</Card.Body>
+</Card>
+</div>
+
+</div>
+
+
 
 
                
            <h3><a rel="noreferrer"href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner.</h3>
             
 
-        </header></div></div>
+        </header>
+        </div>
+        </div>
     );
 }
 
