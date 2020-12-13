@@ -1,4 +1,5 @@
 import Weather from "./Weather";
+import City from "./City.js";
 import Card from 'react-bootstrap/Card';
 
 import './App.css';
@@ -11,25 +12,13 @@ function App() {
                    
               
      < Weather />
-  
 <h1 className="text-center">Current City Name</h1>
 <h2 className="text-center">Time and Date</h2>
-<Card> 
-                <Card.Body>
-   
-    <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Sun icon" id="weather-icon"/>
-    <h2 class="conditions-api text-center" id="conditions">Clear</h2>
 
-<h2 class="text-center" id="current-temperature">
-  18
+     < City />
+     
+  
 
-</h2>
-<h3 class="text-center">
-  <a href="#" class="active" id="temperature-link-c">°C </a> |
-  <a href="#" id="temperature-link">°F </a> </h3>
-
-   </Card.Body>
-</Card>
 
 < hr/>
 
