@@ -12,11 +12,15 @@ const [ready, setReady] = useState(false);
     function handleResponse (response) {
 console.log(response.data);
 setWeatherData ({
+     
   temperature: response.data.main.temp,
-  wind: 12,
+  wind: response.data.wind.speed,
   humidity: response.data.main.humidity,
+  date: "Wednesday 7:00am",
   feels: response.data.main.feels_like,
-  city: response.data.name
+  city: response.data.name,
+  description: response.data.weather[0].description,
+  iconUrl:"http://openweathermap.org/img/wn/01d@2x.png"
 
 })
 setReady(true);
@@ -40,12 +44,12 @@ setReady(true);
         timeout={3000} />
 
 <h1 className="text-center">Current City Name</h1>
-<h2 className="text-center">Time and Date</h2> 
+ <h2 className="text-center">Time and Date</h2> 
 
 <div className="card">
     <div className="card-body text-center">
-<img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Sun icon" id="weather-icon"/>
-<h2 className="conditions-api text-center" id="conditions">Clear</h2>
+<img src={weatherData.iconUrl} alt={weatherData.description} id="weather-icon"/>
+<h2 className="conditions-api text-center text-capitalize" id="conditions">{weatherData.description}</h2>
 
 <h2 className="text-center" id="current-temperature">
 {Math.round(weatherData.temperature)}
@@ -67,7 +71,7 @@ setReady(true);
     <div className="card">
         <div className="card-body text-center">
 <i className="fas fa-wind icon-format"></i>
-<span>Wind</span><span className="wind conditions-format" id="wind-speed">{weatherData.wind}</span>
+<span>Wind</span><span className="wind conditions-format" id="wind-speed"> {Math.round(weatherData.wind)} km/h</span>
 </div>
 </div>
 </div>
@@ -76,7 +80,7 @@ setReady(true);
 <div className="card">
     <div className="card-body text-center">
 <i className="fas fa-temperature-high icon-format"></i>
-Humidity<span className="humid conditions-format" id="humidity">{weatherData.humidity}</span>
+Humidity<span className="humid conditions-format" id="humidity">{weatherData.humidity} %</span>
 </div>
 </div>
 </div>
