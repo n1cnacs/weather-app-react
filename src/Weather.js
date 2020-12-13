@@ -20,19 +20,21 @@ export default function Weather () {
 
     axios.get(apiUrl).then(handleResponse);
     return (
-        <div>
+        <div className="row">
+            <div className="col-10">
             <Form>  
-                <input type="search" placeholder="Search for a city" />
-                <Button className="searchButton" type="submit">Search</Button>
-            </Form>
+                <input type="search" className="form-control" placeholder="Search for a city" />
+               <div className="col-3">
+                <Button className="searchButton" type="submit">Search</Button></div>
+            </Form> 
+                        </div>
         <Loader
         type="Puff"
         color="#00BFFF"
         height={100}
         width={100}
-        timeout={3000} 
-
-     />
+        timeout={3000} />
+    
      </div>
     )
 }

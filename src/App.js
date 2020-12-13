@@ -9,16 +9,14 @@ function App() {
         <div className="container">
       <header className="App-header">
                    
-               <Card> 
-                <Card.Body>
+              
      < Weather />
-   </Card.Body>
-</Card>
+  
 <h1 className="text-center">Current City Name</h1>
 <h2 className="text-center">Time and Date</h2>
 <Card> 
                 <Card.Body>
-    Placeholder
+   
     <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Sun icon" id="weather-icon"/>
     <h2 class="conditions-api text-center" id="conditions">Clear</h2>
 
@@ -41,6 +39,7 @@ function App() {
 <Card w-100>
 <Card.Body>
 Test
+<span>Wind</span><span className="wind conditions-format" id="wind-speed">10</span>
 </Card.Body>
 </Card>
 </div>
@@ -49,6 +48,7 @@ Test
 <Card w-100>
 <Card.Body>
 Test
+Humidity<span className="humid conditions-format" id="humidity">15</span>
 </Card.Body>
 </Card>
 </div>
@@ -57,6 +57,7 @@ Test
 <Card w-100>
 <Card.Body>
 Test
+Feels like <span className="precip conditions-format" id="feels-like">10</span>
 </Card.Body>
 </Card>
 </div>
