@@ -11,10 +11,24 @@ function App() {
                    
                <Card> 
                 <Card.Body>
- 
-    < Weather />
+     < Weather />
    </Card.Body>
 </Card>
+<h1>Current City Name</h1>
+<h2>Time and Date</h2>
+<Card> 
+                <Card.Body>
+    Placeholder
+   </Card.Body>
+</Card>
+
+<Card> 
+                <Card.Body>
+    Placeholder Images Boxes
+   </Card.Body>
+</Card>
+
+
                
            <h3><a rel="noreferrer"href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner.</h3>
             

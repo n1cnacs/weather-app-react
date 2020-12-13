@@ -3,6 +3,9 @@ div.container {
   padding: 30px;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 
+};
 
+.Current-city{
+  text-align: center;
 }
 

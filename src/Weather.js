@@ -3,6 +3,8 @@ import axios from "axios";
 import Loader from 'react-loader-spinner';
 import "./Weather.css";
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 
 
 //
@@ -19,10 +21,10 @@ export default function Weather () {
     axios.get(apiUrl).then(handleResponse);
     return (
         <div>
-            <form>  
+            <Form>  
                 <input type="search" placeholder="Search for a city" />
                 <Button className="searchButton" type="submit">Search</Button>
-            </form>
+            </Form>
         <Loader
         type="Puff"
         color="#00BFFF"
