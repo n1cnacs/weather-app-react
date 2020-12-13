@@ -3,7 +3,6 @@ import axios from "axios";
 import Loader from 'react-loader-spinner';
 import "./Weather.css";
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 
 export default function Weather () {
@@ -15,6 +14,8 @@ console.log(response.data);
 setWeatherData ({
   temperature: response.data.main.temp,
   wind: 12,
+  humidity: response.data.main.humidity,
+  feels: response.data.main.feels_like,
   city: response.data.name
 
 })
@@ -41,9 +42,8 @@ setReady(true);
 <h1 className="text-center">Current City Name</h1>
 <h2 className="text-center">Time and Date</h2> 
 
-<Card> 
-        <Card.Body>
-
+<div className="card">
+    <div className="card-body text-center">
 <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Sun icon" id="weather-icon"/>
 <h2 className="conditions-api text-center" id="conditions">Clear</h2>
 
@@ -55,40 +55,42 @@ setReady(true);
 <a href="#" className="active" id="temperature-link-c">°C </a> |
 <a href="#" id="temperature-link">°F </a> </h3>
 
-</Card.Body>
-</Card>
+
+</div>
+</div>
 
 < hr/>
 
 
 <div className="row">
 <div className="col-4">
-<Card w-100="true">
-<Card.Body>
+    <div className="card">
+        <div className="card-body text-center">
 <i className="fas fa-wind icon-format"></i>
 <span>Wind</span><span className="wind conditions-format" id="wind-speed">{weatherData.wind}</span>
-</Card.Body>
-</Card>
+</div>
+</div>
 </div>
 
 <div className="col-4">
-<Card w-100="true">
-<Card.Body>
+<div className="card">
+    <div className="card-body text-center">
 <i className="fas fa-temperature-high icon-format"></i>
-Humidity<span className="humid conditions-format" id="humidity">15</span>
-</Card.Body>
-</Card>
+Humidity<span className="humid conditions-format" id="humidity">{weatherData.humidity}</span>
+</div>
+</div>
 </div>
 
 <div className="col-4">
-<Card w-100="true">
-<Card.Body>
-<i class="fas fa-tint icon-format"></i>
-Feels like <span className="precip conditions-format" id="feels-like">10</span>
-</Card.Body>
-</Card>
-</div>
+    <div className="card">
+        <div className="card-body text-center">
 
+<i class="fas fa-tint icon-format"></i>
+Feels like <span className="precip conditions-format" id="feels-like">{Math.round(weatherData.feels)}</span>
+
+</div>
+</div>
+</div>
 </div>
 
 
