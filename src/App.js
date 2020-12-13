@@ -10,9 +10,7 @@ function App() {
               
      < Weather defaultCity="New York"/>
    
-     
-
-               
+                    
            <h3><a rel="noreferrer"href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner.</h3>
             
 
