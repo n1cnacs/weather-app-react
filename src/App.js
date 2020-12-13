@@ -14,13 +14,16 @@ function App() {
      < Weather />
    </Card.Body>
 </Card>
-<h1>Current City Name</h1>
-<h2>Time and Date</h2>
+<h1 className="text-center">Current City Name</h1>
+<h2 className="text-center">Time and Date</h2>
 <Card> 
                 <Card.Body>
     Placeholder
+    <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Sun icon" id="weather-icon"/>
+
    </Card.Body>
 </Card>
+
 
 <Card> 
                 <Card.Body>
