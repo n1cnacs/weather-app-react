@@ -1,9 +1,8 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import Loader from 'react-loader-spinner';
 import "./Weather.css";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 
 export default function Weather (props) {
 const [ready, setReady] = useState(false);
@@ -16,7 +15,7 @@ setWeatherData ({
   temperature: response.data.main.temp,
   wind: response.data.wind.speed,
   humidity: response.data.main.humidity,
-  date: "Wednesday 7:00am",
+  date: new Date(response.data.dt * 1000),
   feels: response.data.main.feels_like,
   city: response.data.name,
   description: response.data.weather[0].description,
@@ -28,13 +27,16 @@ setReady(true);
 
  if(ready) {
  return (
-        <div className="row">
+     <div className="Weather">
+              <div className="row">
             <div className="col-10">
-            <Form>  
+            <form>
                 <input type="search" className="form-control" placeholder="Search for a city" />
                <div className="col-3">
-                <Button className="searchButton" type="submit">Search</Button></div>
-            </Form> 
+               <button className="searchButton" type="submit">Search</button></div>
+            </form> 
+            <h1 className="heading text-center">Current City Name</h1> 
+<FormattedDate date={weatherData.date} />
                         </div>
         <Loader
         type="Puff"
@@ -43,8 +45,9 @@ setReady(true);
         width={100}
         timeout={3000} />
 
-<h1 className="text-center">Current City Name</h1>
- <h2 className="text-center">Time and Date</h2> 
+
+
+ 
 
 <div className="card">
     <div className="card-body text-center">
@@ -98,8 +101,8 @@ Feels like <span className="precip conditions-format" id="feels-like">{Math.roun
 </div>
 
 
-    
-     </div>
+    </div>
+        </div>
     );
  } else { const apiKey = "ab0f2c792cf3771f89c1981f17714291";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`
