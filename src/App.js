@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
                    
               
-     < Weather />
+     < Weather defaultCity="New York"/>
    
      
 

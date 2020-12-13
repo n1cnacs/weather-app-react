@@ -5,7 +5,7 @@ import "./Weather.css";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-export default function Weather () {
+export default function Weather (props) {
 const [ready, setReady] = useState(false);
     const [weatherData, setWeatherData] = useState({});
 
@@ -102,8 +102,7 @@ Feels like <span className="precip conditions-format" id="feels-like">{Math.roun
      </div>
     );
  } else { const apiKey = "ab0f2c792cf3771f89c1981f17714291";
-    let city = "London";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
