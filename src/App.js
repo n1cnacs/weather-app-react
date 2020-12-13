@@ -1,5 +1,4 @@
 import Weather from "./Weather";
-import Card from 'react-bootstrap/Card';
 
 import './App.css';
 
