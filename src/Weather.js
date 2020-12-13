@@ -1,13 +1,16 @@
 import React from "react";
 import axios from "axios";
 import Loader from 'react-loader-spinner';
+import "./Weather.css";
+import Button from 'react-bootstrap/Button';
+
 
 //
 
 
 export default function Weather () {
     function handleResponse (response) {
-        alert(`The weather in New York is ${response.data.main.temp} `);
+       // alert(`The weather in New York is ${response.data.main.temp} `);
     }
 
     let apiKey = "ab0f2c792cf3771f89c1981f17714291";
@@ -18,7 +21,7 @@ export default function Weather () {
         <div>
             <form>  
                 <input type="search" placeholder="Search for a city" />
-                <button type="submit">Search</button>
+                <Button className="searchButton" type="submit">Search</Button>
             </form>
         <Loader
         type="Puff"

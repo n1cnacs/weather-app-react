@@ -1,5 +1,6 @@
 div.container {
   max-width: 600px;
+  padding: 30px;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 
 

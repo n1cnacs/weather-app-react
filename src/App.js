@@ -8,14 +8,12 @@ function App() {
       <div className="App">
         <div className="container">
       <header className="App-header">
-       <h1>Hello</h1>
-              
-               <Card> <h1>
-        Weather App        
-        </h1>
-  <Card.Body> 
+                   
+               <Card> 
+                <Card.Body>
+ 
     < Weather />
-    </Card.Body>
+   </Card.Body>
 </Card>
                
            <h3><a rel="noreferrer"href="https://github.com/n1cnacs/weather-app-react.git" target="_blank">Open Source</a> coded by Nicola Warner.</h3>
