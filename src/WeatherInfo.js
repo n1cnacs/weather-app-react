@@ -1,6 +1,7 @@
 import React from "react";
 import Loader from 'react-loader-spinner';
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 
 
 
@@ -28,11 +29,9 @@ export default function WeatherInfo (props) {
 
 <h2 className="text-center" id="current-temperature">
 {Math.round(props.data.temperature)}
-
 </h2>
-<h3 className="text-center">
-<a href="#" className="active" id="temperature-link-c">°C </a> |
-<a href="#" id="temperature-link">°F </a> </h3>
+
+<WeatherTemperature celcius={props.data.temperature} />
 
 
 </div>
